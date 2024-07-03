@@ -6,7 +6,7 @@ class resume(models.Model):
     #basic info on left side of resume
     name=models.CharField(max_length=100)
     job=models.CharField(max_length=100)
-    address=models.CharField(max_length=200)
+    address=models.CharField(max_length=150)
     phone_number = PhoneNumberField(blank=True)
     email=models.EmailField(max_length=100)
     website=models.CharField(max_length=100)
