@@ -10,8 +10,8 @@
        <div class="resume_item resume_info">
          <div class="title">
           {# name and job title #}
-           <p class="bold"> Rohith</p>
-           <p class="regular">Designer</p>
+           <p class="bold"> {{name}}</p>
+           <p class="regular">{{job}}</p>
          </div>
          <ul>
            <li>
@@ -20,7 +20,7 @@
              </div>
              {# address #}
              <div class="data">
-               21 Street, Texas <br /> USA
+               {{address}} <br />
              </div>
            </li>
            <li>
@@ -29,7 +29,7 @@
              </div>
              {# phone #}
              <div class="data">
-               +324 4445678
+               {{phone_number}}
              </div>
            </li>
            <li>
@@ -38,7 +38,7 @@
              </div>
              {# email #}
              <div class="data">
-               stephen@gmail.com
+               {{email}}
              </div>
            </li>
            <li>
@@ -47,7 +47,7 @@
              </div>
              {#  website #}
              <div class="data">
-               www.stephen.com
+               {{website}}
              </div>
            </li>
          </ul>
@@ -60,7 +60,7 @@
          <ul>
            <li>
              <div class="skill_name">
-               HTML
+               {{skill1}}
              </div>
              <div class="skill_progress">
                <span style="width: 80%;"></span>
@@ -69,7 +69,7 @@
            </li>
            <li>
              <div class="skill_name">
-               CSS
+               {{skill2}}
              </div>
              <div class="skill_progress">
                <span style="width: 70%;"></span>
@@ -78,8 +78,8 @@
            </li>
            <li>
              <div class="skill_name">
-               SASS
-             </div>
+              {{skill3}}
+            </div>
              <div class="skill_progress">
                <span style="width: 90%;"></span>
              </div>
@@ -87,7 +87,7 @@
            </li>
            <li>
              <div class="skill_name">
-               JS
+              {{skill3}}
              </div>
              <div class="skill_progress">
                <span style="width: 60%;"></span>
@@ -96,7 +96,7 @@
            </li>
            <li>
              <div class="skill_name">
-               JQUERY
+              {{skill4}}
              </div>
              <div class="skill_progress">
                <span style="width: 88%;"></span>
@@ -117,7 +117,7 @@
              </div>
              <div class="data">
                <p class="semi-bold">Twitter</p>
-               <p>Stephen@twitter</p>
+               <p>{{twitter}}</p>
              </div>
            </li>
            <li>
@@ -126,7 +126,7 @@
              </div>
              <div class="data">
                <p class="semi-bold">Youtube</p>
-               <p>Stephen@youtube</p>
+               <p>{{ytb}}</p>
              </div>
            </li>
            <li>
@@ -135,7 +135,7 @@
              </div>
              <div class="data">
                <p class="semi-bold">Linkedin</p>
-               <p>Stephen@linkedin</p>
+               <p>{{linkedin}}</p>
              </div>
            </li>
          </ul>
@@ -151,7 +151,7 @@
               <i class="fa fa-language" aria-hidden="true"></i>
             </div>
             <div class="data">
-              <p class="semi-bold">English</p>
+              <p class="semi-bold">{{lang1}}</p>
             </div>
           </li>   
           <li>
@@ -159,7 +159,7 @@
               <i class="fa fa-language" aria-hidden="true"></i>
             </div>
             <div class="data">
-              <p class="  semi-bold">Malayalam  </p>
+              <p class="  semi-bold">{{lang2}}  </p>
             </div>
           </li>      
         </ul>  
@@ -172,9 +172,10 @@
         <div class="title">
            <p class="bold">About us</p>
          </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+        <p>{{about}}</p>
     </div>
     {# WORK EX #}
+    {% if work1 %}
     <div class="resume_item resume_work">
         <div class="title">
            <p class="bold">Work Experience</p>
@@ -185,8 +186,8 @@
                   <div class="date">2013 - 2015</div> 
                 {% endcomment %}
                 <div class="info">
-                     <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{work1}}</p> 
+                  <p>{{work1_info}}</p>
                 </div>
             </li>
             <li>
@@ -194,12 +195,13 @@
                   <div class="date">2013 - 2015</div> 
                 {% endcomment %}              
                  <div class="info">
-                     <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{work2}}</p> 
+                  <p>{{work2_info}}</p>
                 </div>
             </li>
         </ul>
     </div>
+    {% endif %}
     {# PROJECTS #}
     <div class="resume_item resume_work">
       <div class="title">
@@ -208,20 +210,20 @@
       <ul>
           <li>
               <div class="info">
-                   <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                   <p class="semi-bold">{{project1}}</p> 
+                <p>{{project1_info}}</p>
               </div>
           </li>
           <li>
             <div class="info">
-                   <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                   <p class="semi-bold">{{project2}}</p> 
+                <p>{{project2_info}}</p>
               </div>
           </li>
           <li>
             <div class="info">
-                   <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                   <p class="semi-bold">{{project3}}</p> 
+                <p>{{project3_info}}</p>
               </div>
           </li>
       </ul>
@@ -237,8 +239,8 @@
                   <div class="date">2013 - 2015</div> 
                 {% endcomment %}                
                  <div class="info">
-                     <p class="semi-bold">Web Designing (Texas University)</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{collegeName}}</p> 
+                  <p>{{college_course}}</p>
                 </div>
             </li>
             <li>
@@ -246,13 +248,14 @@
                   <div class="date">2013 - 2015</div> 
                 {% endcomment %}              
                   <div class="info">
-                     <p class="semi-bold">Texas International School</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{schoolName}}</p> 
+                  <p>{{school_info}}</p>
                 </div>
             </li>
         </ul>
     </div>
     {# Certifications #}
+    {% if certificate1 %}
     <div class="resume_item resume_education">
       <div class="title">
            <p class="bold">Certifications</p>
@@ -260,17 +263,18 @@
       <ul>
             <li>
                 <div class="info">
-                     <p class="semi-bold">Web Designing (Texas University)</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{certificate1}}</p> 
+                  <p>{{certificate1_info}}</p>
                 </div>
             </li>
             <li>
               <div class="info">
-                     <p class="semi-bold">Texas International School</p> 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                     <p class="semi-bold">{{certificate2}}</p> 
+                  <p>{{certificate2_info}}</p>
                 </div>
             </li>
         </ul>
-    </div>  
+    </div> 
+    {% endif %} 
   </div>
 </div>
